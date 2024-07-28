@@ -16,7 +16,7 @@ exports.createUser = async(req,res) =>{
         }
         const userAlreadyExist = User.findOne({email:email})
 
-        if(userAlreadyExist){
+        if(userAlreadyExist == true){
             throw new Error("User already exist")
         }
 
